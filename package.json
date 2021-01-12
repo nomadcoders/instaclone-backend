@@ -1,0 +1,19 @@
+{
+  "name": "instaclone",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomadcoders/instaclone-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nomadcoders/instaclone-backend/issues"
+  },
+  "homepage": "https://github.com/nomadcoders/instaclone-backend#readme"
+}
