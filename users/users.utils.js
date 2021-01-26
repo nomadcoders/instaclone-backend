@@ -17,3 +17,9 @@ export const getUser = async (token) => {
     return null;
   }
 };
+
+export const protectResolver = (user) => {
+  if (!user) {
+    throw new Error("You need to login.");
+  }
+};
