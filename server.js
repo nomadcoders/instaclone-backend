@@ -4,6 +4,7 @@ import logger from "morgan";
 import { ApolloServer } from "apollo-server-express";
 import { typeDefs, resolvers } from "./schema";
 import { getUser } from "./users/users.utils";
+import pubsub from "./pubsub";
 
 const PORT = process.env.PORT;
 const apollo = new ApolloServer({
@@ -17,6 +18,7 @@ const apollo = new ApolloServer({
 });
 
 const app = express();
+apollo.installSubscriptionHandlers(app);
 app.use(logger("tiny"));
 apollo.applyMiddleware({ app });
 app.use("/static", express.static("uploads"));
