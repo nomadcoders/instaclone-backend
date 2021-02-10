@@ -89,6 +89,7 @@ model Message {
   userId    Int
   room      Room     @relation(fields: [roomId], references: [id])
   roomId    Int
+  read      Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
