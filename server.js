@@ -26,6 +26,7 @@ const apollo = new ApolloServer({
   },
   subscriptions: {
     onConnect: async ({ token }) => {
+      console.log(token);
       if (!token) {
         throw new Error("You can't listen.");
       }
@@ -38,7 +39,7 @@ const apollo = new ApolloServer({
 });
 
 const app = express();
-app.use(logger("tiny"));
+app.use(logger("dev"));
 apollo.applyMiddleware({ app });
 app.use("/static", express.static("uploads"));
 
